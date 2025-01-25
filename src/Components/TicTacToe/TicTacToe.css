@@ -1,54 +1,116 @@
+/* Mobile First Styles (default) */
 .container {
     text-align: center;
+    padding: 20px; /* Add padding for mobile screens */
 }
+
 .title {
-    font-size: 60px;
+    font-size: 32px; /* Smaller font for mobile */
     color: white;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
+    flex-direction: column; /* Stack title vertically on mobile */
 }
+
 .title span {
-color: #26ffcb;
-padding-left: 15px;
+    color: #26ffcb;
+    padding-left: 10px;
 }
 
 .reset {
-    width: 250px;
-    height: 100px;
+    width: 200px; /* Adjust button size for mobile */
+    height: 70px;
     border: none;
     cursor: pointer;
     outline: none;
     border-radius: 50px;
     background: #1f3540;
     color: #26ffcb;
-    font-size: 26px;
-    margin-top: 25px;
-    margin-bottom: 50px;
+    font-size: 20px; /* Adjust font size for mobile */
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .boxes {
     display: flex;
-    width: 180px;
-    height: 180px;
+    width: 50%; /* Reduce width for mobile */
+    height: 50%;
     background: #1f3540;
     border: 4px solid #0f1b21;
     border-radius: 12px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 .board {
-    height: 600px;
-    width: 564px;
+    height: 100%;
+    width: 100%;
     display: flex;
     margin: auto;
+    justify-content: center; /* Center the board */
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
 }
+
 .boxes img {
-    margin: 50px 50px;
+    margin: 10px; /* Reduce margin around images */
 }
+
 .title img {
-    padding: 20px 20px;
-    height: 60px;
-  }
-  
+    padding: 10px;
+    height: 50px; /* Adjust image size */
+}
+
+/* For tablets and larger screens (min-width: 600px) */
+@media (min-width: 600px) {
+    .title {
+        font-size: 48px; /* Adjust font size for tablets */
+    }
+
+    .reset {
+        width: 220px;
+        height: 80px;
+        font-size: 22px;
+    }
+
+    .boxes {
+        width: 30%; /* Increase width for tablet screens */
+        height: 30%;
+    }
+
+    .board {
+        width: 80%;
+    }
+
+    .title img {
+        height: 55px;
+    }
+}
+
+/* For desktop screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .title {
+        font-size: 60px; /* Font size for desktop */
+    }
+
+    .reset {
+        width: 250px;
+        height: 100px;
+        font-size: 26px;
+    }
+
+    .boxes {
+        width: 180px; /* Full width for larger screens */
+        height: 180px;
+    }
+
+    .board {
+        width: 60%;
+    }
+
+    .title img {
+        height: 60px; /* Larger image size for desktop */
+    }
+}
